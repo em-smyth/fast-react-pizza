@@ -3,7 +3,6 @@ import { formatCurrency } from "../../utils/helpers";
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
-  console.log(id, name, unitPrice, ingredients, soldOut, imageUrl);
   return (
     <li>
       <img src={imageUrl} alt={name} />
