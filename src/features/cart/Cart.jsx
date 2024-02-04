@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 
+import { clearCart, getCart, getUsername } from "./cartSlice";
+
 import LinkButton from "../../UI/LinkButton";
 import Button from "../../UI/Button";
 import CartItem from "./CartItem";
 import EmptyCart from "./EmptyCart";
-import { clearCart, getCart, getUsername } from "./cartSlice";
 
 function Cart() {
   const username = useSelector(getUsername);

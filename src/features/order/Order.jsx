@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // Test ID: IIDSAT
 import OrderItem from "./OrderItem";
 
@@ -10,10 +9,11 @@ import {
   formatCurrency,
   formatDate,
 } from "../../utils/helpers";
+import UpdateOrder from "./UpdateOrder";
 
 function Order() {
   const order = useLoaderData();
-  // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
+  // Everyone can search for all orders, so for privacy reasons names or address names & addresses are excluded, these are only for the restaurant staff
 
   const fetcher = useFetcher();
 
@@ -90,6 +90,7 @@ function Order() {
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
       </div>
+      {!priority && <UpdateOrder order={order} />}
     </div>
   );
 }

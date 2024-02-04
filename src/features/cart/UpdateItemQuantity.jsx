@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
 
-import Button from "../../UI/Button";
 import { decreaseItemQuantity, increaseItemQuantity } from "./cartSlice";
+
+import Button from "../../UI/Button";
 
 function UpdateItemQuantity({ pizzaId, currentQuantity }) {
   const dispatch = useDispatch();

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import Button from "../../UI/Button";
+
 import { updateName } from "./userSlice";
+
+import Button from "../../UI/Button";
 
 function CreateUser() {
   const [username, setUsername] = useState("");

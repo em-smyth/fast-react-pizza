@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Form, redirect, useNavigation, useActionData } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import EmptyCart from "../cart/EmptyCart";
-import Button from "../../UI/Button";
+
 import { createOrder } from "../../services/apiRestaurant";
 import { clearCart, getCart, getTotalCartPrice } from "../cart/cartSlice";
 import { formatCurrency } from "../../utils/helpers";
-import store from "../../store";
 import { fetchAddress } from "../user/userSlice";
+
+import EmptyCart from "../cart/EmptyCart";
+import Button from "../../UI/Button";
+import store from "../../store";
 
 // https://uibakery.io/regex-library/phone-number
 const isValidPhone = (str) =>
